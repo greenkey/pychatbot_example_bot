@@ -1,4 +1,7 @@
+__version__ = "0.1"
+
 from pychatbot.bot import Bot, command
+import pychatbot
 
 
 class ExampleBot(Bot):
@@ -9,3 +12,9 @@ class ExampleBot(Bot):
     @command
     def start(self):
         return "Welcome to ExampleBot, the bot that uses pychatbot library!"
+
+    @command
+    def version(self):
+        my_version = "ExampleBot v%s" % __version__
+        lib_version = "pychatbot v%s" % pychatbot.__version__
+        return "\n".join([my_version, lib_version])

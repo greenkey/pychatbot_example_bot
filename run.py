@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 
 import os
+import logging
 
-from endpoints.http import HttpEndpoint
-from endpoints.telegram import TelegramEndpoint
-import telegram.ext
+from pychatbot.endpoints import HttpEndpoint, TelegramEndpoint
+from example_bot import ExampleBot
+
+
+logging.basicConfig(level=logging.DEBUG)
 
 
 if __name__ == "__main__":
-    from example_bot import ExampleBot
-
     bot = ExampleBot()
 
     bot.add_endpoint(HttpEndpoint())
@@ -20,4 +21,4 @@ if __name__ == "__main__":
 
     bot.run()
 
-    print("Serving...")
+    logging.info("Serving...")
