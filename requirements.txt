@@ -1,1 +1,2 @@
 -e git://github.com/greenkey/pychatbot.git#egg=pychatbot
+pytest
