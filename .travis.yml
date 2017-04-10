@@ -1,8 +1,15 @@
 sudo: false
 language: python
 python:
-  - "3.5"
+- '3.5'
 install:
-  - make init
+- make init
 script:
-  - make test
+- make test
+deploy:
+  provider: heroku
+  api_key:
+    secure: RBfQ4G5VaWA23O2LrOxEJjGG3MVRrGc5plADwzcPDOssjH6k0bv3luDCaZK2nAJ7XVBfkwjoK7gTZCcyPDIKcfgeZAvpLzCxe516KpPMKkvuKmYqpO1qDYuq7btqCjvQL4awSq+LyWGtIR/dUalp/VKownDYvgpte6N68DNmNhuOj0EazYNy1hNxOywGiJyj6hMm7ciu35EscI+6YW1aMPcSdsn4xV4mXJQgF6MEjrxF/LLBiLBaxSc+ATkJHzKTBbaX1x65fv7cq/3U/ncV71e07yxgZs4p9AwJx42zDi4GXlKCbhDWx05odDT5uROLe3SFGV+0h7yJMVegYcbYkpk8bBttibvaPc3ZLKiw6bY9NvOTorb7Jcg0ev8T6RUya1K0qfZ0G0fNQeQN/HfHtqCpQ/Gzhy2X/r3pceZwI/RBFVQZ6MhS13yN7NhkfgjSBXk70V0lfmfJwiZUwyGfWaZ96bnA7VSsuwItMSBKXZkdacaCNRCtD+yTqX7CHejlWUvkTsqWuuoGxhe2P//ZAYHrrxN0x1yVf+pirmlAaQSdMIzgswTOxrRODANjknNtIWIKcnrF3AtAdkofyK8JQxzM0aUjpKPx7/YHRjMQrTOfq0P5LX6ZhAXj8SHChvk9nugUvWeTVBiaMuY+EVA1T92SztK8EHV3+h4133YTyYM=
+  app: pychatbot-example-bot
+  on:
+    repo: greenkey/pychatbot_example_bot
