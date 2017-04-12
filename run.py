@@ -11,9 +11,12 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 if __name__ == "__main__":
+
     bot = ExampleBot()
 
-    bot.add_endpoint(HttpEndpoint())
+    bot.add_endpoint(HttpEndpoint(
+        port=int(os.environ['PORT'])
+    ))
 
     bot.add_endpoint(TelegramEndpoint(
         token=os.environ['BOT_TG_TOKEN']
