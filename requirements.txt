@@ -1,2 +1,2 @@
--e git://github.com/greenkey/pychatbot.git#egg=pychatbot
+-e git://github.com/greenkey/eddie.git#egg=eddie
 pytest

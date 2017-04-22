@@ -1,4 +1,4 @@
-import pychatbot
+import eddie
 import example_bot
 
 
@@ -22,4 +22,4 @@ def test_get_version():
     output = bot.process('/version')
 
     assert example_bot.__version__ in output
-    assert pychatbot.__version__ in output
+    assert eddie.__version__ in output

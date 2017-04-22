@@ -1,7 +1,7 @@
 __version__ = "0.2"
 
-from pychatbot.bot import Bot, command
-import pychatbot
+from eddie.bot import Bot, command
+import eddie
 
 
 class ExampleBot(Bot):
@@ -11,10 +11,14 @@ class ExampleBot(Bot):
 
     @command
     def start(self):
-        return "Welcome to ExampleBot, the bot that uses pychatbot library!"
+        return """
+            Hi, I'm EddieBot, the bot that uses eddie library!
+
+            Type /help
+        """
 
     @command
     def version(self):
         my_version = "ExampleBot v%s" % __version__
-        lib_version = "pychatbot v%s" % pychatbot.__version__
+        lib_version = "eddie v%s" % eddie.__version__
         return "\n".join([my_version, lib_version])

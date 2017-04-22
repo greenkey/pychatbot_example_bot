@@ -3,7 +3,7 @@
 import os
 import logging
 
-from pychatbot.endpoints import HttpEndpoint, TelegramEndpoint, TwitterEndpoint
+from eddie.endpoints import HttpEndpoint, TelegramEndpoint, TwitterEndpoint
 from example_bot import ExampleBot
 
 
