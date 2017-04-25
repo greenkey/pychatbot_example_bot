@@ -1,2 +1,2 @@
--e git://github.com/greenkey/eddie.git#egg=eddie
+eddie
 pytest
