@@ -5,7 +5,7 @@ import example_bot
 def test_default_echoes():
     bot = example_bot.ExampleBot()
 
-    assert 'hello!' == bot.process('hello!')
+    assert example_bot.MSG_HELP in bot.process('hello!')
 
 
 def test_welcome():
@@ -13,7 +13,7 @@ def test_welcome():
 
     output = bot.process('/start')
 
-    assert 'welcome' in output.lower()
+    assert example_bot.MSG_WELCOME == output
 
 
 def test_get_version():

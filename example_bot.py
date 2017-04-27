@@ -4,6 +4,20 @@ from eddie.bot import Bot, command
 import eddie
 
 
+MSG_WELCOME = """
+Hi, I'm Eddie-The-Bot, the bot that uses eddie library!
+Type /help for a list of commands available
+"""
+MSG_WHAT = """
+eddie is a library to let you create bot in seconds.
+You can find further information here:
+http://github.com/greenkey/eddie
+"""
+MSG_HELP = """
+Currently I'm not very smart, I'm just programmed with a set of commands:
+"""
+
+
 class ExampleBot(Bot):
 
     def default_response(self, in_message):
@@ -11,11 +25,7 @@ class ExampleBot(Bot):
 
     @command
     def start(self):
-        return """
-            Hi, I'm Eddie-The-Bot, the bot that uses eddie library!
-
-            Type /help
-        """
+        return MSG_WELCOME
 
     @command
     def version(self):
@@ -25,19 +35,11 @@ class ExampleBot(Bot):
 
     @command
     def what(self):
-        text = """
-            eddie is a library to let you create bot in seconds.
-            You can find further information here:
-            http://github.com/greenkey/eddie
-        """
-        return text
+        return MSG_WHAT
 
     @command
     def help(self):
-        text = """
-            Currently I'm not very smart, I'm just programmed with a set of
-            commands:
-        """
+        text = MSG_HELP
         text += '\n'.join([
             self.command_prepend + cmd
             for cmd in self.command_names
