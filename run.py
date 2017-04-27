@@ -7,7 +7,8 @@ from eddie.endpoints import HttpEndpoint, TelegramEndpoint, TwitterEndpoint
 from example_bot import ExampleBot
 
 
-logging.basicConfig(level=logging.DEBUG)
+log_level = os.environ.get('BOT_LOGLEVEL', 'ERROR')
+logging.basicConfig(level=log_level)
 
 
 if __name__ == "__main__":
