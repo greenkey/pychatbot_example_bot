@@ -1,0 +1,3 @@
+[submodule "eddie"]
+	path = eddie
+	url = https://github.com/greenkey/eddie.git

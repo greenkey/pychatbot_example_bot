@@ -1,7 +1,7 @@
 __version__ = "0.2"
 
-from eddie.bot import Bot, command
-import eddie
+from eddie.eddie.bot import Bot, command
+import eddie.eddie as eddie
 
 
 MSG_WELCOME = """
