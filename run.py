@@ -15,12 +15,13 @@ if __name__ == "__main__":
     bot = ExampleBot()
 
     bot.add_endpoint(HttpEndpoint(
-        port=int(os.environ['PORT'])
+        port=int(os.environ['BOT_HTTP_PORT']),
+        certfile=os.environ['BOT_HTTP_CERT']
     ))
 
-    bot.add_endpoint(TelegramEndpoint(
-        token=os.environ['BOT_TG_TOKEN']
-    ))
+    #bot.add_endpoint(TelegramEndpoint(
+    #    token=os.environ['BOT_TG_TOKEN']
+    #))
 
     bot.add_endpoint(TwitterEndpoint(
         consumer_key=os.environ['BOT_TW_consumer_key'],
