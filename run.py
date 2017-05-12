@@ -23,12 +23,12 @@ if __name__ == "__main__":
     #    token=os.environ['BOT_TG_TOKEN']
     #))
 
-    bot.add_endpoint(TwitterEndpoint(
-        consumer_key=os.environ['BOT_TW_consumer_key'],
-        consumer_secret=os.environ['BOT_TW_consumer_secret'],
-        access_token=os.environ['BOT_TW_access_token'],
-        access_token_secret=os.environ['BOT_TW_access_token_secret']
-    ))
+    #bot.add_endpoint(TwitterEndpoint(
+    #    consumer_key=os.environ['BOT_TW_consumer_key'],
+    #    consumer_secret=os.environ['BOT_TW_consumer_secret'],
+    #    access_token=os.environ['BOT_TW_access_token'],
+    #    access_token_secret=os.environ['BOT_TW_access_token_secret']
+    #))
 
     bot.run()
 
